@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Mood Tracker</title>
+  <link rel="stylesheet" href="output.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="text-white min-h-screen bg-gray-900 flex justify-start  items-left p-4 flex-col">
+    <h1 class="md:text-3xl text-xl lg:text-5xl m-[10px]">Mood Tracker</h1>
+ <div class="mt-2">
+    <div class="w-full max-w-lg max-w-[500px] lg:max-w-[900px] lg:max-h-[800px] sm:max-w-[750px] sm:max-h-full max-h-[520px] bg-gray-800 p-6 rounded-lg shadow-md">
+        <header class="flex items-center justify-between w-full p-4">
+          <p class="text-lg font-semibold calendar-current-date"></p>
+          <div class="flex gap-4">
+            <span id="calendar-prev" class="cursor-pointer text-xl hover:bg-gray-700 rounded-md">
+              <i class="ri-arrow-left-s-line"></i>
+            </span>
+            <span id="calendar-next" class="cursor-pointer text-xl hover:bg-gray-700 rounded-md">
+              <i class="ri-arrow-right-s-line"></i>
+            </span>
+          </div>
+        </header>
+    
+        <div class="calendar-body">
+          <ul class="grid grid-cols-7 text-center sm:text-xl font-semibold text-gray-300 pb-2">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+          <ul class="calendar-dates grid grid-cols-7 gap-4 text-center"></ul>
+        </div>
+      </div>
+ </div>
+ <div>
+    <div class="relative w-64">
+        <select 
+            name="moods" 
+            id="moods-select" 
+            class="w-full md:p-3 p-2 ms:mt-4 mt-2 md:text-lg font-medium border-2 border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 text-gray-800 dark:text-gray-200"
+        >
+            <option class="text-black" >Moods</option>
+            <option class="text-black value="😃">Happy 😃</option>
+            <option class="text-black value="😢">Sad 😢</option>
+            <option class="text-black value="😠">Angry 😠</option>
+            <option class="text-black value="🤩">Excited 🤩</option>
+            <option class="text-black value="😐">Neuteral 😐</option>
+            <option class="text-black value="😰">Nervous 😰</option>
+            <option class="text-black value="😌">Relaxed 😌</option>
+            <option class="text-black value="😩">Stressed 😩</option>
+            <option class="text-black value="🥱">Bored 🥱</option>
+        </select>
+    </div>
+    <div id="mood-container" class="p-4 bg-gray-800 rounded-md sm:max-w-[600px] text-white text-lg mt-4 text-center">
+
+    </div>
+ </div>
+  <script src="script.js"></script>
+</body>
+</html>
