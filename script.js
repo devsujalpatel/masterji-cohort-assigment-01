@@ -71,7 +71,7 @@ function renderCalendar() {
     let key = `${currentYear}-${currentMonth}-${i}`;
     let storedMood = moodData[key];
     // checking if that date has any mood selected in local storage to render
-    days += `<li class="p-2 sm:p-3 sm:text-xl rounded-md sm:border sm:border-gray-700 sm:text-xl hover:bg-zinc-600 cursor-pointer sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] content-center ${
+    days += `<li class="p-2 sm:p-3 sm:text-xl lg:text-3xl rounded-md sm:border sm:border-gray-700  hover:bg-zinc-600 cursor-pointer sm:w-[60px] sm:h-[60px] lg:w-[80px] lg:h-[80px] w-[50px] h-[50px] content-center ${
       isToday ? "bg-gray-700" : ""
     }">${storedMood ? storedMood.emoji : i}</li>`;
   }
